@@ -1,0 +1,19 @@
+{
+  "name": "action-add-comment",
+  "version": "0.0.1",
+  "description": "Add a comment on a PR/issue, including variables",
+  "main": "index.js",
+  "repository": "https://github/jdvr/action-add-comment",
+  "author": "Juan D. Vega",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn ncc build index.js -o dist"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.27.0"
+  }
+}

@@ -1,0 +1,14 @@
+name: 'Add Comment to PR or Issue'
+description: 'Add a comment to a PR or issue, supporting emoji, markdown and variables'
+inputs:
+  comment:
+    description: 'The content of the comment, use $ to resolve environment variables'
+    required: true
+    default: ''
+branding:
+  icon: git-pull-request
+  color: orange
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+
