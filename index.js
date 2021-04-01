@@ -27,6 +27,9 @@ async function main() {
         if(github.context.eventName !== 'pull_request') {
             core.setFailed('This action must run only on PR triggered workflows');
         }
+        if (!process.env.GITHUB_TOKEN) {
+            core.setFailed('GITHUB_TOKEN env variable is mandatory')
+        }
 
         const target = github.context.payload.pull_request.number;
         const message = getMessage(core.getInput('comment'));
